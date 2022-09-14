@@ -1,0 +1,24 @@
+[
+    {
+      "id": 1,
+      "name": "Altın",
+      "quantity": "10",
+      "purchasePrice": "54",
+      "salePrice": "55"
+    },
+    {
+      "id": 2,
+      "name": "Gümüş",
+      "quantity": "30",
+      "purchasePrice": "18",
+      "salePrice": "20"
+    },
+    {
+      "id": 3,
+      "name": "Bakır",
+      "quantity": "50",
+      "purchasePrice": "3.6",
+      "salePrice": "3.8"
+    }
+    
+  ]

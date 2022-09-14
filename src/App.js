@@ -1,6 +1,8 @@
 import './App.css';
 import React, { useState } from 'react';
 import LoginForm from './components/LoginForm';
+import TableApp from './components/table/TableApp';
+
 
 
 function App() {
@@ -34,7 +36,7 @@ function App() {
   return (
     <div className="App">
       {(user.email != "") ? (
-        <div>Table</div>
+        <TableApp />
       ) : (
         <LoginForm Login={Login} error={error}/>
       ) }

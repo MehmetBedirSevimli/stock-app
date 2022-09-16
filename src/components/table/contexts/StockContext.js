@@ -5,11 +5,14 @@ export const StockContext = createContext();
 
 const StockContextProvider = (props) => {
   
-  const[ stocks, setstocks ] = useState(data);
+  const[ stocks, setStocks ] = useState(data);
 
+  const addStock = (id, name, quantity, purchasePrice, salePrice) => {
+    setStocks([...stocks, {id, name, quantity, purchasePrice, salePrice}])
+  }
   
   return (
-    <StockContext.Provider value={{stocks}}>
+    <StockContext.Provider value={{stocks, addStock}}>
       {props.children}
     </StockContext.Provider>
   )

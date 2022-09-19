@@ -13,7 +13,7 @@ const StockList = () => {
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
-  useEffect(() =>{
+  useEffect(() => {
     handleClose();
   }, [stocks])
 
@@ -23,7 +23,7 @@ const StockList = () => {
       <div className="table-title">
         <div className="row">
           <div className="col-sm-6">
-            <h2>Manage <b>Stocks</b></h2>
+            <h2><b>Stok</b> Yönetimi</h2>
           </div>
           <div className="col-sm-6">
             <Button onClick={handleShow} className="btn btn-success text-white" data-toggle="modal"><i className="material-icons">&#xE147;</i> <span>Yeni Stok Ekle</span></Button>

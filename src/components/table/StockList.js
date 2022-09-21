@@ -36,14 +36,20 @@ const StockList = () => {
           <tr>
             <th>Numara</th>
             <th>İsim</th>
-            <th>Miktar(gr)</th>
-            <th>Alış Fiyatı</th>
-            <th>Satış Fiyatı</th>
+            <th>Miktar(Ons)</th>
+            <th>Alış Fiyatı (USD/Ons)</th>
+            <th>Alım Tarihi</th>
             <th>Araçlar</th>
           </tr>
         </thead>
         <tbody>
-          <Stock stocks={stocks} />
+          {
+            stocks.map((stock) => (
+              <tr key={stock.id}>
+                <Stock stock={stock} />
+              </tr>
+              ))
+          }
         </tbody>
       </table>
 

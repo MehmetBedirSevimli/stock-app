@@ -2,23 +2,30 @@
     {
       "id": 1,
       "name": "Altın",
-      "quantity": "10",
-      "purchasePrice": "54",
-      "salePrice": "55"
+      "quantity": "23.183",
+      "purchasePrice": "1.669,85",
+      "date": "09/01/2022"
     },
     {
       "id": 2,
       "name": "Gümüş",
-      "quantity": "30",
-      "purchasePrice": "18",
-      "salePrice": "20"
+      "quantity": "30.874",
+      "purchasePrice": "19,49",
+      "date": "09/05/2022"
     },
     {
       "id": 3,
-      "name": "Bakır",
-      "quantity": "50",
-      "purchasePrice": "3.6",
-      "salePrice": "3.8"
+      "name": "Platin",
+      "quantity": "12",
+      "purchasePrice": "931,06",
+      "date": "09/03/2022"
+    },
+    {
+      "id": 4,
+      "name": "Paladyum",
+      "quantity": "1,38",
+      "purchasePrice": "2.151,50",
+      "date": "09/18/2022"
     }
     
   ]

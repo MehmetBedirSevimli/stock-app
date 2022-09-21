@@ -44,7 +44,7 @@ const StockList = () => {
         </thead>
         <tbody>
           {
-            stocks.map((stock) => (
+            stocks.sort((a,b) => (a.id < b.id ? -1 : 1)).map((stock) => (
               <tr key={stock.id}>
                 <Stock stock={stock} />
               </tr>

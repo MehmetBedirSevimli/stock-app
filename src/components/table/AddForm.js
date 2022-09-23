@@ -70,7 +70,7 @@ const AddForm = () => {
 
             <Form.Group>
                 <Form.Control
-                    type="text"
+                    type="date"
                     placeholder="Alım Tarihi *"
                     name="date"
                     value={date}

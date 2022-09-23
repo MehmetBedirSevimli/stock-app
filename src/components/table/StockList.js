@@ -3,19 +3,27 @@ import Stock from "./Stock";
 import { StockContext } from "./contexts/StockContext";
 import { Button, Modal } from "react-bootstrap"
 import AddForm from "./AddForm";
+import Pagination from "./Pagination";
 
 const StockList = () => {
 
-  const { stocks } = useContext(StockContext);
+  const { sortedStocks } = useContext(StockContext);
 
   const [show, setShow] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [stocksPerPage] = useState(2);
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
 
   useEffect(() => {
     handleClose();
-  }, [stocks])
+  }, [sortedStocks])
+
+  const indexOfLastStock = currentPage * stocksPerPage;
+  const indexOfFirstStock = indexOfLastStock - stocksPerPage;
+  const currentStocks = sortedStocks.slice(indexOfFirstStock, indexOfLastStock);
+  const totalPagesNum = Math.ceil(sortedStocks.length / stocksPerPage);
 
   return (
 
@@ -34,7 +42,7 @@ const StockList = () => {
       <table className="table table-striped table-hover">
         <thead>
           <tr>
-            <th>Numara</th>
+            <th>#</th>
             <th>İsim</th>
             <th>Miktar(Ons)</th>
             <th>Alış Fiyatı (USD/Ons)</th>
@@ -44,14 +52,21 @@ const StockList = () => {
         </thead>
         <tbody>
           {
-            stocks.sort((a,b) => (a.id < b.id ? -1 : 1)).map((stock) => (
+            currentStocks.map((stock) => (
               <tr key={stock.id}>
                 <Stock stock={stock} />
               </tr>
-              ))
+            ))
           }
         </tbody>
       </table>
+
+      <Pagination 
+      pages = {totalPagesNum} 
+      setCurrentPage = {setCurrentPage}
+      currentStocks = {currentStocks}
+      sortedStocks = {sortedStocks}
+      /> 
 
       <Modal show={show} onHide={handleClose}>
         <Modal.Header className="modal-header" closeButton>

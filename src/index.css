@@ -125,6 +125,14 @@ body {
 	background: #f5f5f5;
 	font-family: 'Varela Round', sans-serif;
 	font-size: 13px;
+
+	width: 100%;
+	min-height: 100vh;
+	background: #c850c0;
+	background: -webkit-linear-gradient(45deg, #4158d0, #c850c0);
+	background: -o-linear-gradient(45deg, #4158d0, #c850c0);
+	background: -moz-linear-gradient(45deg, #4158d0, #c850c0);
+	background: linear-gradient(45deg, #4158d0, #c850c0);
 }
 
 /* .btn-act {
@@ -143,7 +151,7 @@ body {
 }
 .table-title {        
 	padding-bottom: 15px;
-	background: #435d7d;
+	background: #009fc3;
 	color: #fff;
 	padding: 16px 30px;
 	min-width: 100%;

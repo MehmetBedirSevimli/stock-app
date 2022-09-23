@@ -7,6 +7,8 @@ const StockContextProvider = (props) => {
 
   const [stocks, setStocks] = useState(data);
 
+  const sortedStocks = stocks.sort((a, b) => (a.id < b.id ? -1 : 1));
+
   const addStock = (id, name, quantity, purchasePrice, date) => {
     setStocks([...stocks, { id, name, quantity, purchasePrice, date }])
   }
@@ -20,7 +22,7 @@ const StockContextProvider = (props) => {
   }
 
   return (
-    <StockContext.Provider value={{ stocks, addStock, deleteStock, updateStock }}>
+    <StockContext.Provider value={{ sortedStocks, addStock, deleteStock, updateStock }}>
       {props.children}
     </StockContext.Provider>
   )

@@ -1,45 +1,20 @@
 import './App.css';
-import React, { useState } from 'react';
-import LoginForm from './components/LoginForm';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import TableApp from './components/table/TableApp';
-
-
+import Login from './components/login/Login';
+import PrivateRoutes from './components/login/PrivateRoutes';
 
 function App() {
-  const adminUser = {
-    email: "admin@admin.com",
-    password: "admin123"
-  }
-  
-  const [user, setUser] = useState({email: "", password: ""});
-  const [error, setError] = useState("");
-
-  const Login = details => {
-    console.log(details);
-
-    if(details.email == adminUser.email && details.password == adminUser.password) {
-    console.log("Logged in");
-    setUser({
-      name: details.name,
-      email:details
-    });
-  } else {
-    console.log("Details do not match!");
-    setError("Hata!");
-  }
-  }
-
-  const Logout = () => {
-    setUser({ email: "", password: ""});
-  }
-  
   return (
     <div className="App">
-      {(user.email != "") ? (
-        <TableApp />
-      ) : (
-        <LoginForm Login={Login} error={error}/>
-      ) }
+        <Router>
+          <Routes>
+            <Route element={<PrivateRoutes />}>
+                <Route element={<TableApp/>} path="/table"/>
+            </Route>
+            <Route element={<Login/>} path="/"/>
+          </Routes>
+      </Router>
     </div>
   );
 }

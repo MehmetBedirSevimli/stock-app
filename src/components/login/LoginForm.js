@@ -10,7 +10,8 @@ function LoginForm({ Login, error }) {
         Login(details);
     }
   return (
-    <form onSubmit={submitHandler}>
+    <div className="App1">
+    <form onSubmit={submitHandler} className="login">
         <div className="form-inner">
             <h2>Login</h2>
             {(error != "") ? ( <div className="error">{error}</div>) : ""}
@@ -25,6 +26,7 @@ function LoginForm({ Login, error }) {
             <input type="submit" value="LOGIN"/>
         </div> 
     </form>
+    </div>
   )
 }
 

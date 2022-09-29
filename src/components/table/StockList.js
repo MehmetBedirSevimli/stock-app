@@ -44,7 +44,7 @@ const StockList = () => {
           <tr>
             <th>#</th>
             <th>İsim</th>
-            <th>Miktar(Ons)</th>
+            <th>Miktar(Birim)</th>
             <th>Alış Fiyatı (USD/Ons)</th>
             <th>Alım Tarihi</th>
             <th>Araçlar</th>

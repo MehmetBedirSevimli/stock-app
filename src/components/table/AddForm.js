@@ -7,11 +7,11 @@ const AddForm = () => {
     const { addStock } = useContext(StockContext);
 
     const [newStock, setNewStock] = useState({
-        id: "", name: "", quantity: "", 
+        id: "", name: "", quantity: "", unit: "",
         purchasePrice: "", date: ""
     })
 
-    const { id, name, quantity, purchasePrice, date } = newStock;
+    const { id, name, quantity, unit, purchasePrice, date } = newStock;
 
     const onInputChange = (e) => {
         setNewStock({ ...newStock, [e.target.name]: e.target.value })
@@ -19,7 +19,7 @@ const AddForm = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        addStock(id, name, quantity, purchasePrice, date)
+        addStock(id, name, quantity, unit, purchasePrice, date)
     }
 
     return (
@@ -55,6 +55,22 @@ const AddForm = () => {
                     onChange={e => onInputChange(e)}
                     required
                 />
+            </Form.Group>
+
+            <Form.Group>
+                <Form.Select aria-label="Default select example"
+                    type="text"
+                    placeholder="Miktar(gr) *"
+                    name="unit"
+                    value={unit}
+                    onChange={e => onInputChange(e)}
+                    required
+                >
+                    <option>Birim seçiniz</option>
+                    <option value="(ons)">(ons)</option>
+                    <option value="(gr)">(gr)</option>
+                    <option value="(kg)">(kg)</option>
+                </Form.Select>
             </Form.Group>
 
             <Form.Group>

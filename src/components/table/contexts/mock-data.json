@@ -3,6 +3,7 @@
       "id": 1,
       "name": "Altın",
       "quantity": "23.183",
+      "unit": "(ons)",
       "purchasePrice": "1.669,85",
       "date": "2022-09-08"
     },
@@ -10,6 +11,7 @@
       "id": 2,
       "name": "Gümüş",
       "quantity": "30.874",
+      "unit": "(ons)",
       "purchasePrice": "19,49",
       "date": "2022-09-03"
     },
@@ -17,6 +19,7 @@
       "id": 3,
       "name": "Platin",
       "quantity": "12",
+      "unit": "(ons)",
       "purchasePrice": "931,06",
       "date": "2022-08-26"
     },
@@ -24,6 +27,7 @@
       "id": 4,
       "name": "Paladyum",
       "quantity": "1,38",
+      "unit": "(ons)",
       "purchasePrice": "2.151,50",
       "date": "2022-07-10"
     }

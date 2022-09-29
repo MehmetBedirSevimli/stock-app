@@ -22,7 +22,7 @@ const Stock = ({ stock }) => {
     
       <td>{stock.id}</td>
       <td>{stock.name}</td>
-      <td>{stock.quantity}</td>
+      <td>{stock.quantity}{stock.unit}</td>
       <td>{stock.purchasePrice}</td>
       <td>{stock.date}</td>
       <td>

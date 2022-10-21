@@ -1,4 +1,5 @@
-import { Form, Button } from 'react-bootstrap';
+import { Button } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form'
 import { StockContext } from './contexts/StockContext';
 import { useContext, useState } from 'react';
 
@@ -55,9 +56,7 @@ const AddForm = () => {
                     onChange={e => onInputChange(e)}
                     required
                 />
-            </Form.Group>
 
-            <Form.Group>
                 <Form.Select aria-label="Default select example"
                     type="text"
                     placeholder="Miktar(gr) *"

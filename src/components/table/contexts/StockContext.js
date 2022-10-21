@@ -10,7 +10,7 @@ const StockContextProvider = (props) => {
   const sortedStocks = stocks.sort((a, b) => (a.id < b.id ? -1 : 1));
 
   const addStock = (id, name, quantity, unit, purchasePrice, date) => {
-    setStocks([...stocks, { id, name, quantity, purchasePrice, date }])
+    setStocks([...stocks, { id, name, quantity, unit, purchasePrice, date }])
   }
 
   const deleteStock = (id) => {
